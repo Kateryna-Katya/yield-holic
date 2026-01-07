@@ -1,56 +1,410 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/yield-holic/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yield-Holic — Практики применения ИИ для каждого</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://unpkg.com/split-type"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <script type="module" crossorigin src="/yield-holic/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/yield-holic/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/yield-holic/assets/styles-CAuLQD39.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+    <header class="header" id="header">
+  <div class="container header__container">
+    <a href="/" class="logo">
+      <span class="logo__icon"></span>
+      <span class="logo__text">Yield-Holic</span>
+    </a>
+
+    <nav class="nav" id="nav-menu">
+      <ul class="nav__list">
+        <li><a href="#hero" class="nav__link">Главная</a></li>
+        <li><a href="#about" class="nav__link">О платформе</a></li>
+        <li><a href="#benefits" class="nav__link">Преимущества</a></li>
+        <li><a href="#innovations" class="nav__link">Инновации</a></li>
+        <li><a href="#blog" class="nav__link">Обучение</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="#contact" class="btn btn--primary">Связаться</a>
+      <button class="burger" id="burger-menu" aria-label="Открыть меню">
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
+<div class="mobile-menu" id="mobile-menu">
+  <nav class="mobile-menu__nav">
+    <a href="#hero" class="mobile-menu__link">Главная</a>
+    <a href="#about" class="mobile-menu__link">О платформе</a>
+    <a href="#benefits" class="mobile-menu__link">Преимущества</a>
+    <a href="#innovations" class="mobile-menu__link">Инновации</a>
+    <a href="#blog" class="mobile-menu__link">Обучение</a>
+    <a href="#contact" class="btn btn--primary mobile-menu__btn">Связаться</a>
+  </nav>
+</div>
 
-
-    <main>
+    <main data-scroll-container>
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+    <div class="hero__bg">
+        <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:var(--primary);stop-opacity:0.2" />
+                    <stop offset="100%" style="stop-color:var(--secondary);stop-opacity:0.1" />
+                </linearGradient>
+            </defs>
+            <g class="hero__lines" stroke="url(#grad1)" stroke-width="1" fill="none" stroke-linecap="round">
+                <path d="M200,300 Q400,100 600,300 T1000,300" />
+                <path d="M100,500 Q300,300 500,500 T900,500" />
+                <path d="M300,700 Q500,500 700,700 T1100,700" />
+                <path d="M-100,200 Q100,400 300,200 T700,200" />
+                <circle cx="200" cy="300" r="3" fill="var(--primary)" />
+                <circle cx="600" cy="300" r="4" fill="var(--secondary)" />
+                <circle cx="500" cy="500" r="3" fill="var(--primary)" />
+            </g>
+        </svg>
+    </div>
+
+    <div class="container hero__container">
+        <div class="hero__content">
+            <div class="hero__badge">
+                <span>Инновационная технология</span>
+                <i data-lucide="sparkles"></i>
+            </div>
+            <h1 class="hero__title split-text">
+                AI для обычных людей — воплотите мечты в реальность.
+            </h1>
+            <p class="hero__text fade-in">
+                Откройте новые возможности и постройте стратегию роста на базе инноваций. Пошаговый путь, понятный
+                каждому. Платформа уже доступна в Европе.
+            </p>
+            <div class="hero__btns fade-in">
+                <a href="#contact" class="btn btn--primary">
+                    Начать сейчас
+                    <i data-lucide="arrow-right" style="width: 18px; margin-left: 8px;"></i>
+                </a>
+                <a href="#about" class="btn btn--outline">Узнать детали</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about" id="about">
+    <div class="container">
+        <div class="about__header">
+            <h2 class="about__title-main fade-up">Ваш проводник в мир ИИ</h2>
+            <p class="about__subtitle fade-up">Мы переосмыслили подход к обучению. Yield-Holic — это не про сложный код,
+                а про то, как заставить технологии работать на вас уже сегодня.</p>
+        </div>
+
+        <div class="about__grid">
+            <div class="about__card reveal">
+                <div class="about__card-icon">
+                    <i data-lucide="brain-circuit"></i>
+                </div>
+                <h3 class="about__card-title">AI-инструменты для жизни</h3>
+                <p class="about__card-text">Узнайте, как делегировать рутину нейросетям: от планирования бюджета до
+                    создания персональных планов тренировок.</p>
+            </div>
+
+            <div class="about__card reveal">
+                <div class="about__card-icon">
+                    <i data-lucide="zap"></i>
+                </div>
+                <h3 class="about__card-title">Быстрый и лёгкий старт</h3>
+                <p class="about__card-text">Легко разобраться без опыта. Мы подготовили пошаговый путь, который займет
+                    всего 2 минуты для первого подключения.</p>
+            </div>
+
+            <div class="about__card reveal">
+                <div class="about__card-icon">
+                    <i data-lucide="graduation-cap"></i>
+                </div>
+                <h3 class="about__card-title">Практики сегодня</h3>
+                <p class="about__card-text">Только применимые решения. Никакой воды — только те инструменты, которые
+                    экономят ваше время и деньги.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="benefits" id="benefits">
+    <div class="container">
+        <div class="benefits__grid">
+            <div class="benefits__content">
+                <div class="hero__badge" style="opacity: 1; transform: none;">
+                    <span>Ваши результаты</span>
+                </div>
+                <h2 class="benefits__title">Цифровое превосходство в ваших руках</h2>
+                <p class="benefits__text">
+                    Мы не просто обучаем инструментам. Мы даем методологию, которая меняет правила игры в вашей
+                    повседневной жизни и карьере.
+                </p>
+                <div class="benefits__stats">
+                    <div class="stat-item">
+                        <span class="stat-item__num" data-count="10">0</span>
+                        <span class="stat-item__label">часов в неделю сэкономлено</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-item__num" data-count="100">0</span>
+                        <span class="stat-item__label">% практических кейсов</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="benefits__cards">
+                <div class="benefit-card">
+                    <div class="benefit-card__icon"><i data-lucide="shield-check"></i></div>
+                    <h4 class="benefit-card__title">Стандарты ЕС</h4>
+                    <p>Безопасность данных и соответствие GDPR. Мы базируемся в Германии и гарантируем надежность.</p>
+                </div>
+                <div class="benefit-card benefit-card--accent">
+                    <div class="benefit-card__icon"><i data-lucide="trending-up"></i></div>
+                    <h4 class="benefit-card__title">Карьерный рост</h4>
+                    <p>Специалисты, владеющие AI, зарабатывают в среднем на 30% больше. Будьте впереди.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-card__icon"><i data-lucide="users"></i></div>
+                    <h4 class="benefit-card__title">Сообщество</h4>
+                    <p>Доступ к закрытому чату экспертов, которые помогут внедрить AI в любой ваш проект.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="innovations" id="innovations">
+    <div class="container">
+        <div class="innovations__grid">
+            <div class="innovations__header">
+                <h2 class="innovations__title reveal-each">Технологии, которые меняют правила игры</h2>
+                <p class="innovations__text reveal-each">Мы отобрали лучшие AI-решения и адаптировали их для
+                    повседневного использования. Без сложной настройки, без программирования.</p>
+                <div class="innovations__visual reveal-each">
+                    <div class="glow-sphere"></div>
+                </div>
+            </div>
+
+            <div class="innovations__list">
+                <div class="innovation-item reveal-each">
+                    <div class="innovation-item__num">01</div>
+                    <div class="innovation-item__content">
+                        <h4 class="innovation-item__title">Генеративная инфраструктура</h4>
+                        <p>Создание контента, текстов и изображений профессионального уровня за считанные секунды.</p>
+                    </div>
+                </div>
+                <div class="innovation-item reveal-each">
+                    <div class="innovation-item__num">02</div>
+                    <div class="innovation-item__content">
+                        <h4 class="innovation-item__title">Предиктивная аналитика</h4>
+                        <p>ИИ анализирует ваши данные и дает советы по оптимизации бюджета и времени.</p>
+                    </div>
+                </div>
+                <div class="innovation-item reveal-each">
+                    <div class="innovation-item__num">03</div>
+                    <div class="innovation-item__content">
+                        <h4 class="innovation-item__title">Персональные AI-агенты</h4>
+                        <p>Настройка виртуальных помощников, которые знают ваши предпочтения и выполняют задачи в
+                            фоновом режиме.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog" id="blog">
+    <div class="container">
+        <div class="blog__header">
+            <h2 class="blog__title reveal-each">Начните путь к мастерству</h2>
+            <p class="blog__subtitle reveal-each">Наши образовательные программы и статьи помогут вам пройти путь от
+                новичка до уверенного пользователя ИИ за считанные дни.</p>
+        </div>
+
+        <div class="blog__grid">
+            <article class="blog-card reveal-each">
+                <div class="blog-card__image">
+                    <img src="img/placeholder.png" alt="AI Basics">
+                    <span class="blog-card__tag">Для новичков</span>
+                </div>
+                <div class="blog-card__content">
+                    <h3 class="blog-card__title">AI 101: Пошаговое руководство</h3>
+                    <p class="blog-card__text">Разбираем основы: от регистрации в популярных нейросетях до первого
+                        полезного результата.</p>
+                    <a href="#contact" class="blog-card__link">
+                        Читать статью
+                        <i data-lucide="chevron-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="blog-card reveal-each">
+                <div class="blog-card__image">
+                    <img src="img/placeholder.png" alt="Prompt Engineering">
+                    <span class="blog-card__tag">Практика</span>
+                </div>
+                <div class="blog-card__content">
+                    <h3 class="blog-card__title">Магия промптов для жизни</h3>
+                    <p class="blog-card__text">Как правильно ставить задачи ИИ, чтобы получать идеальные ответы для
+                        работы и быта.</p>
+                    <a href="#contact" class="blog-card__link">
+                        Узнать детали
+                        <i data-lucide="chevron-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="blog-card reveal-each">
+                <div class="blog-card__image">
+                    <img src="img/placeholder.png" alt="AI Automation">
+                    <span class="blog-card__tag">Профи</span>
+                </div>
+                <div class="blog-card__content">
+                    <h3 class="blog-card__title">Автоматизация без кода</h3>
+                    <p class="blog-card__text">Связываем разные сервисы с ИИ, чтобы они работали за вас 24/7. Постройте
+                        свою карьеру.</p>
+                    <a href="#contact" class="blog-card__link">
+                        Запросить доступ
+                        <i data-lucide="chevron-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <div class="blog__footer reveal-each">
+            <p>Хотите индивидуальную программу?</p>
+            <a href="#contact" class="btn btn--outline">Бесплатная консультация</a>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__grid">
+            <div class="contact__info reveal-each">
+                <h2 class="contact__title">Готовы внедрить интеллект?</h2>
+                <p class="contact__text">Оставьте заявку на бесплатную консультацию. Мы поможем подобрать инструменты,
+                    которые подходят именно вашим задачам.</p>
+                <div class="contact__status">
+                    <span class="pulse"></span>
+                    Эксперты онлайн. Ответ в течение 15 минут.
+                </div>
+            </div>
+
+            <form class="contact__form reveal-each" id="main-form">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" placeholder="Иван Иванов" required>
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" name="email" placeholder="hello@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Телефон</label>
+                    <input type="text" id="phone-input" name="phone" placeholder="+49..." required>
+                </div>
+
+                <div class="form-group">
+                    <label id="captcha-label">Решите пример: 5 + 3 = ?</label>
+                    <input type="number" id="captcha-input" placeholder="Ваш ответ" required>
+                </div>
+
+                <div class="form-checkbox">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree">Я согласен с <a href="privacy.html">политикой конфиденциальности</a></label>
+                </div>
+
+                <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">
+                    Отправить запрос
+                </button>
+
+                <div id="form-success" class="form-message success">Спасибо! Ваша заявка отправлена.</div>
+                <div id="form-error" class="form-message error">Ошибка в капче. Попробуйте еще раз.</div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <a href="/" class="logo footer__logo">
+        <span class="logo__icon"></span>
+        <span class="logo__text">Yield-Holic</span>
       </a>
-    </p>
+      <p class="footer__description">
+        Технологии нового поколения, доступные каждому. Мы переосмыслим ваш подход к развитию в цифровую эпоху.
+      </p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Меню</h4>
+      <ul class="footer__links">
+        <li><a href="#about">О платформе</a></li>
+        <li><a href="#benefits">Преимущества</a></li>
+        <li><a href="#innovations">Инновации</a></li>
+        <li><a href="#blog">Обучение</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Юридическая информация</h4>
+      <ul class="footer__links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookie Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="return.html">Return Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="personal-data-policy.html">Personal Data</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Контакты</h4>
+      <ul class="footer__contact-list">
+        <li>
+          <i data-lucide="map-pin"></i>
+          <span>Friedrichstraße 76, 10117 Berlin, Deutschland</span>
+        </li>
+        <li>
+          <i data-lucide="phone"></i>
+          <a href="tel:+493020963900">+49 30 20963900</a>
+        </li>
+        <li>
+          <i data-lucide="mail"></i>
+          <a href="mailto:hello@yield-holic.fit">hello@yield-holic.fit</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom container">
+    <p>&copy; 2026 Yield-Holic. Платформа уже доступна в Европе.</p>
   </div>
 </footer>
-
+    <div class="cookie-popup" id="cookie-popup">
+      <div class="cookie-popup__content">
+        <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie
+            политике</a>.</p>
+        <button class="btn btn--primary btn--sm" id="accept-cookies">Принять</button>
+      </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   </body>
 </html>
