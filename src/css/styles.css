@@ -1071,3 +1071,107 @@ img {
 .hero__title {
     overflow: visible !important;
 }
+/* Styles for Legal Pages */
+.pages {
+    padding: 160px 0 100px;
+    /* Учитываем высоту фиксированного хедера */
+    min-height: 80vh;
+}
+
+.pages__title {
+    font-size: 3.5rem;
+    margin-bottom: 48px;
+    line-height: 1.1;
+    color: var(--dark);
+}
+
+.pages__content {
+    max-width: 900px;
+}
+
+.pages__content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    color: var(--text);
+}
+
+.pages__content h2 {
+    font-size: 1.8rem;
+    margin: 48px 0 24px;
+    color: var(--dark);
+}
+
+.pages__list {
+    margin-bottom: 32px;
+    padding-left: 20px;
+}
+
+.pages__list li {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    position: relative;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.pages__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.pages__link {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.pages__link:hover {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+/* Адаптив для страниц */
+@media (max-width: 768px) {
+    .pages {
+        padding: 120px 0 60px;
+    }
+
+    .pages__title {
+        font-size: 2.5rem;
+    }
+
+    .pages__content h2 {
+        font-size: 1.5rem;
+    }
+}
+/* Дополнительные стили для Дисклеймера */
+.pages__content strong {
+    color: var(--dark);
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.pages__footer-info {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+/* Эффект появления при наведении на абзацы */
+.pages__content p {
+    transition: var(--transition);
+    padding: 10px 0;
+}
+
+.pages__content p:hover {
+    color: var(--dark);
+}
